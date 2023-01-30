@@ -1,9 +1,6 @@
 <h1 align="center">
-<br>
-  <a href="https://github.com/stephentian/33-js-concepts"><img src="33_js_concepts.jpg" alt="每位 JS 开发应该懂的 33 个概念" width=200"></a>
   <br>
-    <br>
-  JavaScript开发者应懂的33个概念
+  机器人开发者应懂的33个概念
   <br>
 </h1>
 
@@ -26,6 +23,21 @@
 - 2018-12-04 更新：@haner199401 贡献的 @冴羽 "JavaScript 深入之从原型到原型链"
 
 ---
+
+## demo
+
+```js
+// fake http
+function http(res, time = 200) {
+  return new Promise((resolve, reject) => {
+    setTimeout(_ => {
+      var data = mockServer(res)
+      console.log('fake server return data: ', data)
+      resolve(data)
+    }, time)
+  })
+}
+```
 
 ## 目录
 
@@ -468,211 +480,6 @@
 - :tv: [DOM 事件探秘 —— 慕课网](https://www.imooc.com/learn/138)
 - :tv: [jQuery 基础(二)DOM 篇 —— 慕课网](https://www.imooc.com/learn/530)
 - :tv: [JS 操作 DOM 对象属性和方法 —— 爱奇艺](http://www.iqiyi.com/w_19rr19s08l.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 22. new 与构造函数, instanceof 与实例
-
-### 文章
-
-- :book: [构造函数与 new 命令 —— 阮一峰](http://javascript.ruanyifeng.com/oop/basic.html)
-- :book: [Javascript 面向对象编程（二）：构造函数的继承 —— 阮一峰](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html)
-- :book: [完整原型链详细图解(构造函数、原型、实例化对象) —— CSDN](https://blog.csdn.net/SpicyBoiledFish/article/details/71123162)
-- :book: [JavaScript 中构造函数与 new 操作符的实例详解 —— PHP 中文网](http://www.php.cn/js-tutorial-376246.html)
-- :book: [构造函数、实例、原型、原型链之间的关系 —— CSDN](https://blog.csdn.net/yin_991/article/details/80954453)
-- :book: [深入理解 JS—instanceof 和原型链 —— CSDN](https://blog.csdn.net/cecilia620/article/details/71158048)
-- :book: [前端基础进阶（九）：详解面向对象、构造函数、原型与原型链 —— 简书](https://www.jianshu.com/p/15ac7393bc1f)
-- :book: [js 用 new 实例化对象与直接调用的 this 的区别 —— 简书](https://www.jianshu.com/p/60ffc4831bff)
-- :book: [JavaScript 并非所有的东西都是对象 —— justjavac](http://justjavac.com/javascript/2012/12/22/javascript-values-not-everything-is-an-object.html)
-- :book: [JavaScript instanceof 运算符深入剖析 —— IBM](https://www.ibm.com/developerworks/cn/web/1306_jiangjj_jsinstanceof/)
-
-### 视频
-
-- :tv: [改良版的构造函数 —— 乐视](http://www.le.com/ptv/vplay/27766889.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 23. 原型继承与原型链
-
-### 文章
-
-- :book: [继承与原型链 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- :book: [构造函数、原型与原型链 —— github](https://github.com/bigdots/blog/issues/1)
-- :book: [原型及原型链 —— github(1269 Star)](https://github.com/stone0090/javascript-lessons/tree/master/2.5-Prototype)
-- :book: [理清 javascript 中的面向对象(一) 原型继承 —— SegmentFault](https://segmentfault.com/a/1190000004282206)
-- :book: [JavaScript：继承和原型链(译) —— justjavac](http://justjavac.com/2015/12/09/inheritance-and-the-prototype-chain.html)
-- :book: [三张图搞懂 JavaScript 的原型对象与原型链 —— 博客园](http://www.cnblogs.com/shuiyi/p/5305435.html)
-- :book: [一张图让你搞懂 JavaScript 的继承与原型链 —— CSDN](https://blog.csdn.net/the__apollo/article/details/76774698)
-- :book: [JS 高级--原型链(一看就懂，但 18 岁以下请绕道) —— CSDN](https://blog.csdn.net/xiaotao_css/article/details/72782416)
-- :book: [原型继承 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344997013405abfb7f0e1904a04ba6898a384b1e925000)
-- :book: [JS 原型链与继承别再被问倒了 —— 掘金](https://juejin.im/post/58f94c9bb123db411953691b)
-- :book: [征服 JavaScript 面试系列：类继承和原型继承的区别 —— 掘金](https://juejin.im/entry/5885db221b69e600592253e7)
-- :book: [JavaScript 深入之从原型到原型链 —— 冴羽](https://github.com/mqyqingfeng/Blog/issues/2)
-- :book: [深入理解 JavaScript 原型与闭包 —— 王福朋](https://www.cnblogs.com/wangfupeng1988/p/3977924.html)
-
-### 视频
-
-- :tv: [JS 高级-07-原型链继承 —— 乐视](http://www.le.com/ptv/vplay/27552753.html)
-- :tv: [JS 原型对象和原型链简介 —— 腾讯视频](https://v.qq.com/x/page/b0511nwa7d3.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 24. Object.create 和 Object.assign
-
-### 文章
-
-- :book: [Object.create —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
-- :book: [Object.assign —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
-- :book: [Object.create vs Object.assign —— 慕课网手记](https://www.imooc.com/article/17591)
-- :book: [JS 中的 Object.assign()、Object.create()、Object.defineProperty() —— CSDN](https://blog.csdn.net/DeepLies/article/details/52915143)
-- :book: [es6 中 object.create()和 object.assign() —— 风信子博客](http://www.onlyfordream.cn/2018/03/19/es6%E4%B8%ADobject-create%E5%92%8Cobject-assign/)
-- :book: [Object-Assign-Deep —— github](https://github.com/saikojosh/Object-Assign-Deep)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 25. 工厂函数和类
-
-### 文章
-
-- :book: [类 —— MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)
-- :book: [类和实例 —— 廖雪峰](https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00138682004077376d2d7f8cc8a4e2c9982f92788588322000)
-- :book: [Javascript 定义类（class）的三种方法 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/07/three_ways_to_define_a_javascript_class.html)
-- :book: [【译】ES6 的工厂函数 —— 掘金](https://juejin.im/post/59c8c8756fb9a00a681ae5bd)
-- :book: [JavaScript 创建对象之单例、工厂、构造函数模式 —— 掘金](https://juejin.im/entry/587992c961ff4b0065edf1ff)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 26. 设计模式
-
-### 文章
-
-- :book: [JavaScript 设计模式 —— 掘金](https://juejin.im/post/59df4f74f265da430f311909)
-- :book: [学用 JavaScript 设计模式 —— 极客学院](http://wiki.jikexueyuan.com/project/javascript-design-patterns/)
-- :book: [[面试专题]JS 设计模式 —— SegmentFault](https://segmentfault.com/a/1190000010914032)
-- :book: [JavaScript Patterns 中译本 —— github](https://github.com/lxj/javascript.patterns)
-
-### 视频
-
-- :tv: [HTML5 课程大纲 2-11JS 设计模式](https://tv.sohu.com/v/dXMvMjQwNzYwNzQ4Lzg5NzM2MDA3LnNodG1s.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 27. Memoization
-
-### 文章
-
-- :book: [JavaScript Memoization —— 司徒正美](https://www.cnblogs.com/rubylouvre/archive/2009/08/06/1540678.html)
-- :book: [memoization 提升递归效率 —— 博客园](https://www.cnblogs.com/yingshuizy/p/4517102.html)
-- :book: [如何提升 JavaScript 的递归效率 —— 51CTO](http://developer.51cto.com/art/201010/231513.htm)
-- :book: [JavaScript 高级技巧 Memoization —— SegmentFaut](https://segmentfault.com/a/1190000016703106)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 28. 纯函数, 函数副作用和状态变化
-
-### 文章
-
-- :book: [纯函数(Pure Function) —— React.js 小书](http://huziketang.mangojuice.top/books/react/lesson32)
-- :book: [JavaScript Functional Programming：纯函数 —— 宁皓网](https://ninghao.net/blog/4634)
-- :book: [js 函数的副作用分析 —— 脚本之家](https://www.jb51.net/article/28079.htm)
-- :book: [如何使用纯函数式 JavaScript 处理脏副作用 —— 掘金](https://juejin.im/post/5b82bdb351882542e241ed32?utm_medium=hao.caibaojian.com&utm_source=hao.caibaojian.com)
-- :book: [原生 JavaScript 实现 state 状态管理系统 —— 博客园](http://www.cnblogs.com/zhangycun/p/9403335.html)
-- :book: [JavaScript 函数式编程 —— @BuptStEve](https://github.com/BuptStEve/blog/issues/10)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 29. 耗性能操作和时间复杂度
-
-### 文章
-
-- :book: [时间复杂度 O(log n) 意味着什么？ —— 掘金](https://juejin.im/entry/593f56528d6d810058a355f4)
-- :book: [算法的时间复杂度和空间复杂度 —— 掘金](https://juejin.im/entry/5a49f7d36fb9a0450a67b269)
-- :book: [算法（一）时间复杂度 —— 掘金](https://juejin.im/post/58d15f1044d90400691834d4)
-- :book: [Big O Search Algorithms in JavaScript —— Bradley Braithwaite](http://www.bradoncode.com/blog/2012/04/big-o-algorithm-examples-in-javascript.html)
-- :book: [Time Complexity Analysis in JavaScript — Jennifer Bland](https://www.jenniferbland.com/time-complexity-analysis-in-javascript/)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 30. JavaScript 引擎
-
-### 文章
-
-- :book: [javascript 引擎 —— 百度百科](https://baike.baidu.com/item/javascript引擎/5356108)
-- :book: [V8(JavaScript 引擎) —— 百度百科](https://baike.baidu.com/item/V8/6178125)
-- :book: [图解搞懂 JavaScript 引擎 Event Loop —— 掘金](https://juejin.im/post/5a6309f76fb9a01cab2858b1)3
-- :book: [V8 JavaScript 引擎：高性能的 ES2015+ —— justjavac](https://segmentfault.com/a/1190000010819020)
-- :book: [10 分钟理解 JS 引擎的执行机制 —— SegmentFaut](https://segmentfault.com/a/1190000012806637)
-- :book: [V8 javascript 引擎 —— 博客园](https://www.cnblogs.com/weirdoQi/p/6609811.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 31. 二进制, 十六进制, 十进制, 科学记数法
-
-### 文章
-
-- :book: [二、八、十、十六进制转换(图解篇) —— 博客园](http://www.cnblogs.com/gaizai/p/4233780.html)
-- :book: [JavaScript 读写二进制数据 —— 掘金](https://juejin.im/post/5b93dadaf265da0a857a58a3)
-
-### 视频
-
-- :tv: [二进制、十进制、十六进制互相转化很难吗？ —— 百度视频](http://baishi.baidu.com/watch/7873060963471478456.html)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 32. 偏函数, 柯里化, Compose 和 Pipe
-
-### 文章
-
-- :book: [Javascript 函数式编程之偏函数 —— CSDN](https://blog.csdn.net/qq_42129063/article/details/81874314)
-- :book: [JavaScript 专题之偏函数 —— SegmentFault](https://segmentfault.com/a/1190000010686144)
-- :book: [柯里化和偏函数有什么区别？ —— SegmentFault](https://segmentfault.com/q/1010000008626058)
-- :book: [Javascript 偏函数与柯里化 —— CSDN](https://blog.csdn.net/neweastsun/article/details/75947785)
-- :book: [柯里化(curry) —— JS 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch4.html)
-- :book: [代码组合(compose) —— JS 函数式编程指南](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/ch5.html)
-- :book: [关于 javascript 函数式编程中 compose 的实现 —— SegmentFault](https://segmentfault.com/a/1190000008394749)
-- :book: [实现 compose 的五种思路 —— SegmentFault](https://segmentfault.com/a/1190000011447164)
-- :book: [JavaScript 函数式编程之函数组合函数 compose 和 pipe 的实现 —— SegmentFault](https://segmentfault.com/a/1190000015102804)
-- :book: [JavaScript 轻量级函数式编程-第 4 章:组合函数 ——掘金](https://juejin.im/post/59a62f3d6fb9a0248363fd9d#comment)
-- :book: [JavaScript 函数式编程（二） —— @BuptStEve](https://github.com/BuptStEve/blog/issues/11)
-
-**[:arrow_up: 返回目录](#目录)**
-
----
-
-## 33. 代码整洁之道
-
-### 文章
-
-- :book: [[译] JavaScript 代码整洁之道 —— 边城](https://www.zcfy.cc/article/clean-code-javascript-readme-md-at-master-ryanmcdermott-clean-code-javascript-github-2273.html)
-- :book: [Javascript 编程风格 —— 阮一峰](http://www.ruanyifeng.com/blog/2012/04/javascript_programming_style.html)
-- :book: [重构 - 代码整洁之道 —— 掘金](https://juejin.im/post/5a5b2a5c6fb9a01cbc6e59f9)
-- :book: [让你的代码更简短，更整洁，更易读的 ES6 小技巧 —— 掘金](https://juejin.im/post/5a7d71836fb9a063435ecf51)
-- :book: [Web 前端：11 个让你代码整洁的原则 —— 伯乐在线](http://blog.jobbole.com/23617/)
-- :book: [Clean Code concepts adapted for JavaScript —— ryanmcdermott](https://github.com/ryanmcdermott/clean-code-javascript)
-
-<br>
 
 **[:arrow_up: 返回目录](#目录)**
 
