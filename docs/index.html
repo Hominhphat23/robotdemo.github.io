@@ -12,21 +12,20 @@
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script> -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
 </head>
 <body>
   <div id="app"></div>
 
   <script>
     var gitalkConfig = {
-      clientID: "8b7cffeb4ae285e0e3e4",
-      clientSecret: "58d06f5220e953d6dac7d6723daf225177cc7bb3",
-      repo: "You-need-to-know-css",
-      owner: "l-hammer",
-      admin: ["l-hammer"],
+      clientID: "a3dfa11720258879257c",
+      clientSecret: "479f3cb8facb68cce958970851cd56ac5bc3f94f",
+      repo: "robotdemo.github.io",
+      owner: "zeroone001",
+      admin: ["zeroone001"],
       perPage: 20,
       language: "zh-CN",
-      labels: ["💬Gitalk"],
+      // labels: [],
       pagerDirection: "last",
       distractionFreeMode: false
     };
@@ -58,7 +57,22 @@
       repo: 'https://github.com/zeroone001/robotdemo.github.io/tree/master',
       loadSidebar: true,
       loadNavbar: true,
-      // disqus: 'shortname',
+      auto2top: true,
+      mergeNavbar: true,
+      subMaxLevel: 2,
+      homepage: "README.md",
+      search: {
+        noData: {
+          "/en/": "No results!",
+          "/": "找不到结果!"
+        },
+        // paths: "auto",
+        depth: 6,
+        placeholder: {
+          "/en/": "Search",
+          "/": "搜索"
+        }
+      },
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function(html) {
@@ -105,6 +119,7 @@
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.min.js"></script>
 
 </body>
 </html>
