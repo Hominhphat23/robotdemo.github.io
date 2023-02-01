@@ -1,9 +1,9 @@
 - Design pattern
 
-  - [Chapter I](desgin-pattern/第一章节.md)
-  - [Chapter II](desgin-pattern/第二章节.md)
-  - [Factory mode](desgin-pattern/第一章节.md)
-  - [Prototype pattern](desgin-pattern/第一章节.md)
+  - [Chapter I](en/第一章节.md)
+  - [Chapter II](en/第二章节.md)
+  - [Factory mode](en/第一章节.md)
+  - [Prototype pattern](en/第一章节.md)
 
 - Spring framework
 
