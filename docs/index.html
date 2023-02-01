@@ -17,17 +17,20 @@
   <div id="app"></div>
 
   <script>
+    // https://api.github.com/repos/l-hammer/You-need-to-know-css/issues?labels=%F0%9F%92%ACGitalk,home&t=1675155570069
+    // https://api.github.com/repos/zeroone001/robotdemo.github.io/issues?labels=home&t=1675154610797
     var gitalkConfig = {
-      clientID: "a3dfa11720258879257c",
-      clientSecret: "479f3cb8facb68cce958970851cd56ac5bc3f94f",
+      clientID: "a2bdae5457402030fb6b",
+      clientSecret: "c1c9ce6f3334a85f5456b602ca138dee038fd414",
       repo: "robotdemo.github.io",
       owner: "zeroone001",
       admin: ["zeroone001"],
       perPage: 20,
       language: "zh-CN",
-      // labels: [],
+      // labels: ['Open'],
       pagerDirection: "last",
-      distractionFreeMode: false
+      distractionFreeMode: false,
+      proxy: 'http://192.168.31.16:8011'
     };
     // https://github.com/gitalk/gitalk#install
     // const gitalk = new Gitalk({
@@ -54,7 +57,7 @@
     //   gitalk.render('gitalk-container');
     window.$docsify = {
       name: 'Robot Open Source',
-      repo: 'https://github.com/zeroone001/robotdemo.github.io/tree/master',
+      repo: 'https://github.com/zeroone001/robotdemo.github.io',
       loadSidebar: true,
       loadNavbar: true,
       auto2top: true,
@@ -73,6 +76,10 @@
           "/": "搜索"
         }
       },
+      // Valine: {
+      //   appId: 'fORRxSTIHwpBoKkgfJ20sYCh-gzGzoHsz',
+      //   appKey: 'x7TNHar21x0B3ERILxcpstu0'
+      // },
       plugins: [
         function(hook, vm) {
           hook.beforeEach(function(html) {
@@ -117,9 +124,10 @@
       ]
     }
   </script>
+  <!-- <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script src="//unpkg.com/docsify-valine/dist/docsify-valine.min.js"></script> -->
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.min.js"></script>
-
 </body>
 </html>
