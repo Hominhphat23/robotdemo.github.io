@@ -10,8 +10,13 @@ https://zeroone001.github.io/robotdemo.github.io/#/
 
 https://github.com/gitalk/gitalk#install
 
+## 仓库地址
+
+https://github.com/zeroone001/robotdemo.github.io
 
 ## gittalk
+
+https://github.com/gitalk/gitalk
 
 ```js
 var gitalkConfig = {
@@ -39,3 +44,7 @@ const gitalk = new Gitalk({
 
 gitalk.render('gitalk-container');
 ```
+
+## 开源
+
+https://github.com/doocs/doocs.github.io
