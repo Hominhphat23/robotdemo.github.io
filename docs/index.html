@@ -7,7 +7,9 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <!-- <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css"> -->
+  <link rel="stylesheet" href="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/gitalk/dist/gitalk.css" />
+  <link rel="stylesheet" href="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/docsify-darklight-theme@latest/dist/style.min.css">
 
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script> -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
@@ -53,6 +55,21 @@
       mergeNavbar: true,
       subMaxLevel: 2,
       homepage: "README.md",
+      darklightTheme: {
+        defaultTheme: 'light',
+        siteFont: 'Source Sans Pro,Helvetica Neue,Arial,sans-serif',
+        codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+        bodyFontSize: '15px',
+        dark: {
+          background: '#191919',
+          highlightColor: '#e96900',
+          codeBackgroundColor: '#202020',
+          codeTextColor: '#b4b4b4',
+        },
+        light: {
+          highlightColor: '#e96900',
+        }
+      },
       search: {
         noData: {
           "/en/": "No results!",
@@ -80,34 +97,34 @@
             return editHtml + html;
           });
 
-          hook.doneEach(function() {
-            var label, domObj, main, divEle, gitalk;
-            label = vm.route.path.split("/").pop();
-            domObj = Docsify.dom;
-            main = domObj.getNode("#main");
+          // hook.doneEach(function() {
+          //   var label, domObj, main, divEle, gitalk;
+          //   label = vm.route.path.split("/").pop();
+          //   domObj = Docsify.dom;
+          //   main = domObj.getNode("#main");
 
-            /**
-             * render gittalk
-             */
-            if (vm.route.path.includes("en")) {
-              gitalkConfig.language = "en";
-            }
-            Array.apply(
-              null,
-              document.querySelectorAll("div.gitalk-container")
-            ).forEach(function(ele) {
-              ele.remove();
-            });
-            divEle = domObj.create("div");
-            divEle.id = "gitalk-container-" + label;
-            divEle.className = "gitalk-container";
-            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-            domObj.appendTo(domObj.find(".content"), divEle);
-            gitalk = new Gitalk(
-              Object.assign(gitalkConfig, { id: !label ? "home" : label })
-            );
-            gitalk.render("gitalk-container-" + label);
-          });
+          //   /**
+          //    * render gittalk
+          //    */
+          //   if (vm.route.path.includes("en")) {
+          //     gitalkConfig.language = "en";
+          //   }
+          //   Array.apply(
+          //     null,
+          //     document.querySelectorAll("div.gitalk-container")
+          //   ).forEach(function(ele) {
+          //     ele.remove();
+          //   });
+          //   divEle = domObj.create("div");
+          //   divEle.id = "gitalk-container-" + label;
+          //   divEle.className = "gitalk-container";
+          //   divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+          //   domObj.appendTo(domObj.find(".content"), divEle);
+          //   gitalk = new Gitalk(
+          //     Object.assign(gitalkConfig, { id: !label ? "home" : label })
+          //   );
+          //   gitalk.render("gitalk-container-" + label);
+          // });
         },
         // EditOnGithubPlugin.create('https://github.com/zeroone001/robotdemo.github.io/tree/master/docs/', 'https://github.com/zeroone001/robotdemo.github.io/tree/master/docs/')
       ]
@@ -118,5 +135,37 @@
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.min.js"></script>
+  <script src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <script src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    // const gitalk = new Gitalk({
+    //   clientID: "88a228f7139b31216822",
+    //   clientSecret: "d2c7e7c11b91d2e0f3d7ed3ed1ab1b2c08ad5591",
+    //   repo: "doocs.github.io",
+    //   owner: "doocs",
+    //   admin: ["yanglbme"],
+    //   number: 1,
+    //   distractionFreeMode: true,
+    //   labels: ["talk"],
+    //   title: "Welcome to join the Doocs Open Source organization",
+    //   perPage: 15,
+    // });
+    const gitalk = new Gitalk({
+      clientID: "a2bdae5457402030fb6b",
+      clientSecret: "c1c9ce6f3334a85f5456b602ca138dee038fd414",
+      repo: "robotdemo.github.io",
+      owner: "zeroone001",
+      admin: ["zeroone001"],
+      perPage: 20,
+      language: "zh-CN",
+      labels: ['Gitalk'],
+      // pagerDirection: "last",
+      distractionFreeMode: true,
+      // title: "Welcome to join the Doocs Open Source organization",
+      id: 'home', 
+    });
+  </script>
+
 </body>
 </html>
