@@ -8,7 +8,6 @@ docsify serve ./docs
 
 https://zeroone001.github.io/robotdemo.github.io/#/
 
-https://github.com/gitalk/gitalk#install
 
 ## 仓库地址
 
@@ -16,7 +15,13 @@ https://github.com/zeroone001/robotdemo.github.io
 
 ## gittalk
 
+展示GitHub issues 内容的插件
+
 https://github.com/gitalk/gitalk
+
+### 安装
+
+https://github.com/gitalk/gitalk#install
 
 ```js
 var gitalkConfig = {
