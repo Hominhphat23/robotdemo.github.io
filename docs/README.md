@@ -467,4 +467,239 @@ index ab5a4f413d57af..f4731c213d7304 100644
 @@ -282,8 +282,7 @@ describe('Module syntax detection', { concurrency: !process.env.TEST_PARALLEL },
          'function fn() { await Promise.resolve(); } fn();',
        ]);
+Wind media CREATE TABLE `ip2location_geonameid`(
+	`country_code` CHAR(2),
+	`region_name` VARCHAR(128),
+	`city_name` VARCHAR(128),
+	`geonameid` INT(10),
+	INDEX `idx_country_code` (`country_code`),
+	INDEX `idx_region_name` (`region_name`),
+	INDEX `idx_city_name` (`city_name`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+LOAD DATA LOCAL
+INFILE 'IP2LOCATION-GEONAMEID.CSV' INTO TABLE `ip2location_geonameid`
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n' IGNORE 1 LINES; {
+    "ip": "2001:0ee0:56b2:f0c0:3fa4:ad49:7b32:4d49",
+    "country_code": "VN",
+    "country_name": "Viet Nam",
+    "region_name": "cao bằng",
+    "district": "Quang Hoa District",
+    "city_name": "Dong Da",
+    "latitude": 22.63333,
+    "longitude": 106.4,
+    "zip_code": "270000",
+    "time_zone": "+07:00",
+    "asn": "45899",
+    "as": "VNPT Corp",
+    "isp": "Vietnam Posts and Telecommunications Group",
+    "domain": "vnpt.com.vn",
+    "net_speed": "DSL",
+    "idd_code": "84",
+    "area_code": "026",
+    "weather_station_code": "VMXX0020",
+    "weather_station_name": "Cao Bang",
+    "mcc": "452",
+    "mnc": "02",
+    "mobile_brand": "Vinaphone",
+    "elevation": 446,
+    "usage_type": "ISP/MOB",
+    "address_type": "Unicast",
+    "ads_category": "IAB19-18",
+    "ads_category_name": "Internet Technology",
+    "continent": {
+        "name": "Asia",
+        "code": "AS",
+        "hemisphere": [
+            "north",
+            "east"
+        ],
+        "translation": {
+            "lang": "en",
+            "value": "Asia"
+        }
+    },
+    "country": {
+        "name": "Viet Nam",
+        "alpha3_code": "VNM",
+        "numeric_code": 704,
+        "demonym": "Vietnamese",
+        "flag": "https://cdn.ip2location.io/assets/img/flags/vn.png",
+        "capital": "Ha Noi",
+        "total_area": 331210,
+        "population": 104799174,
+        "currency": {
+            "code": "VND",
+            "name": "Vietnamese Dong",
+            "symbol": "\u20ab"
+        },
+        "language": {
+            "code": "VI",
+            "name": "Vietnamese"
+        },
+        "tld": "vn",
+        "translation": {
+            "lang": "en",
+            "value": "Viet Nam"
+        }
+    },
+    "region": {
+        "name": "Cao Bang",
+        "code": "VN-04",
+        "translation": {
+            "lang": "en",
+            "value": "Cao Bang"
+        }
+    },
+    "city": {
+        "name": "Dong Da",
+        "translation": {
+            "lang": null,
+            "value": null
+        }
+    },
+    "time_zone_info": {
+        "olson": "Asia/Ho_Chi_Minh",
+        "current_time": "2024-12-08T02:12:33+07:00",
+        "gmt_offset": 25200,
+        "is_dst": false,
+        "sunrise": "06:20",
+        "sunset": "17:11"
+    },
+    "geotargeting": {
+        "metro": null
+    },
+    "is_proxy": false,
+    "fraud_score": 0,
+    "proxy": {
+        "last_seen": 0,
+        "proxy_type": "-",
+        "threat": "-",
+        "provider": "-",
+        "is_vpn": false,
+        "is_tor": false,
+        "is_data_center": false,
+        "is_public_proxy": false,
+        "is_web_proxy": false,
+        "is_web_crawler": false,
+        "is_residential_proxy": false,
+        "is_consumer_privacy_network": false,
+        "is_enterprise_private_network": false,
+        "is_spammer": false,
+        "is_scanner": false,
+        "is_botnet": false
+    }
+}
+{
+    "ip": "2001:0ee0:56b2:f0c0:3fa4:ad49:7b32:4d49",
+    "country_code": "VN",
+    "country_name": "Viet Nam",
+    "region_name": "Cao Bang",
+    "district": "Quang Hoa District",
+    "city_name": "Dong Da",
+    "latitude": 22.63333,
+    "longitude": 106.4,
+    "zip_code": "270000",
+    "time_zone": "+07:00",
+    "asn": "45899",
+    "as": "VNPT Corp",
+    "isp": "Vietnam Posts and Telecommunications Group",
+    "domain": "vnpt.com.vn",
+    "net_speed": "DSL",
+    "idd_code": "84",
+    "area_code": "026",
+    "weather_station_code": "VMXX0020",
+    "weather_station_name": "Cao Bang",
+    "mcc": "452",
+    "mnc": "02",
+    "mobile_brand": "Vinaphone",
+    "elevation": 446,
+    "usage_type": "ISP/MOB",
+    "address_type": "Unicast",
+    "ads_category": "IAB19-18",
+    "ads_category_name": "Internet Technology",
+    "continent": {
+        "name": "Asia",
+        "code": "AS",
+        "hemisphere": [
+            "north",
+            "east"
+        ],
+        "translation": {
+            "lang": "en",
+            "value": "Asia"
+        }
+    },
+    "country": {
+        "name": "Viet Nam",
+        "alpha3_code": "VNM",
+        "numeric_code": 704,
+        "demonym": "Vietnamese",
+        "flag": "https://cdn.ip2location.io/assets/img/flags/vn.png",
+        "capital": "Ha Noi",
+        "total_area": 331210,
+        "population": 104799174,
+        "currency": {
+            "code": "VND",
+            "name": "Vietnamese Dong",
+            "symbol": "\u20ab"
+        },
+        "language": {
+            "code": "VI",
+            "name": "Vietnamese"
+        },
+        "tld": "vn",
+        "translation": {
+            "lang": "en",
+            "value": "Viet Nam"
+        }
+    },
+    "region": {
+        "name": "Cao Bang",
+        "code": "VN-04",
+        "translation": {
+            "lang": "en",
+            "value": "Cao Bang"
+        }
+    },
+    "city": {
+        "name": "Dong Da",
+        "translation": {
+            "lang": null,
+            "value": null
+        }
+    },
+    "time_zone_info": {
+        "olson": "Asia/Ho_Chi_Minh",
+        "current_time": "2024-12-08T02:12:33+07:00",
+        "gmt_offset": 25200,
+        "is_dst": false,
+        "sunrise": "06:20",
+        "sunset": "17:11"
+    },
+    "geotargeting": {
+        "metro": null
+    },
+    "is_proxy": false,
+    "fraud_score": 0,
+    "proxy": {
+        "last_seen": 0,
+        "proxy_type": "-",
+        "threat": "-",
+        "provider": "-",
+        "is_vpn": false,
+        "is_tor": false,
+        "is_data_center": false,
+        "is_public_proxy": false,
+        "is_web_proxy": false,
+        "is_web_crawler": false,
+        "is_residential_proxy": false,
+        "is_consumer_privacy_network": false,
+        "is_enterprise_private_network": false,
+        "is_spammer": false,
+        "is_scanner": false,
+        "is_botnet": false
+    }
+}https://cdn.ip2location.io/assets/img/flags/vn.png
